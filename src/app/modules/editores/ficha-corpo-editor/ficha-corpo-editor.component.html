@@ -1,0 +1,37 @@
+<ion-content>
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>
+        Editar a ficha
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Peso:</ion-label>
+        <ion-input [(ngModel)]="ficha.peso"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Altura:</ion-label>
+        <ion-input [(ngModel)]="ficha.altura"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Gordura Corporal:</ion-label>
+        <ion-input [(ngModel)]="ficha.bodyFat"></ion-input>
+      </ion-item>
+
+
+      <ion-button (click)="salvarEdicao()">SALVAR</ion-button>
+
+      <ion-button color="primary" routerLink="/ficha-corpo">Fichas de Corpo</ion-button>
+
+      <ion-button routerLink="/ficha-corpo" >Voltar</ion-button>
+
+    </ion-card-content>
+
+
+  </ion-card>
+</ion-content>

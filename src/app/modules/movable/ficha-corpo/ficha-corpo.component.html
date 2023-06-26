@@ -1,0 +1,81 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-button  routerLink="/usuario">Voltar</ion-button>
+
+  <ion-button  routerLink="/ficha-corpo-nova">Nova Ficha</ion-button>
+
+  <br>
+
+  <h4>SUAS FICHAS</h4>
+
+  <div *ngFor="let fichas of fichasCorpo">
+    <ion-card>
+
+        <ion-card-header>
+
+        </ion-card-header>
+
+        <ion-card-content>
+
+            <ion-item>
+                <ion-label>
+                    Data: {{fichas.dataCriacao}}
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    Sexo: {{fichas.sexo}}
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    Altura: {{fichas.altura}}
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    Peso: {{fichas.peso}}
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    Imc: {{fichas.imc}}
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    Body Fat: {{fichas.bodyFat}}
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    Status: {{fichas.status}}
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>
+                  <ion-button (click)="visualizarMedidas(fichas.id)">Visualizar Medidas</ion-button>
+              </ion-label>
+          </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    <ion-button (click)="editarFicha(fichas.id)">Editar</ion-button>
+                </ion-label>
+            </ion-item>
+
+
+        </ion-card-content>
+
+    </ion-card>
+  </div>
+
+</ion-content>
+

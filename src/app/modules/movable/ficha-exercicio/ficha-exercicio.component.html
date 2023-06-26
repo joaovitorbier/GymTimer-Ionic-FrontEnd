@@ -1,0 +1,38 @@
+<ion-content>
+  <ion-button routerLink="/usuario">Voltar</ion-button>
+  <ion-button routerLink="/ficha-exercicio-nova">Adicionar Nova Lista</ion-button>
+    <ion-list *ngFor="let ficha of fichas">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{ ficha.objetivo }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+
+          <ion-item>
+            <ion-label>Meta Peso: {{ ficha.metaPeso }}</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Meta Body Fat: {{ ficha.metaBodyFat }}</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Nome</ion-label>
+            <ion-input [(ngModel)]="nome"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-button expand="full" (click)="adicionarNovaListaExercicios(ficha.id)">Registrar nova Lista</ion-button>
+          </ion-item>
+          <ion-item>
+            <ion-label>Listas de Exercícios:
+                <ion-item *ngFor="let lista of ficha.listasDeExercicios">
+                    <ion-label>{{ lista.nome }} <ion-button (click)="visualizarFicha(lista.id)">Visualizar Lista Completa</ion-button></ion-label>
+                  </ion-item>
+            </ion-label>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </ion-content>
+  

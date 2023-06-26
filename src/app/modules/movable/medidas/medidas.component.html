@@ -1,0 +1,28 @@
+<ion-content>
+
+  <ion-button  routerLink="/ficha-corpo">Voltar</ion-button>
+
+  <ion-button  (click)="registrarNovaMedida()">Registrar nova medida</ion-button>
+
+  <ion-card *ngFor="let medida of ficha.medidas">
+    <ion-card-header>
+      <ion-card-title>{{ medida.nomeMusculo }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-item>
+        <ion-label>Medida Atual: {{ medida.medidaAtual }} cm</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Medida Anterior: {{ medida.medidaAnterior }} cm</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Diferença de: {{medida.medidaAtual - medida.medidaAnterior}} cm</ion-label>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

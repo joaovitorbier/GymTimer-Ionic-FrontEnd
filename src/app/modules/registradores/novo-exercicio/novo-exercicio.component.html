@@ -1,0 +1,42 @@
+<ion-content>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>New Exercise</ion-card-title>
+        <ion-button expand="full" color="primary" routerLink="/ficha-exercicio">Voltar</ion-button>
+    </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Nome</ion-label>
+          <ion-input type="text" [(ngModel)]="exercicio.nome"></ion-input>
+        </ion-item>
+        <ion-label>Categoria Muscular</ion-label>
+        <ion-select [(ngModel)]="exercicio.categoriaMuscular">
+          <ion-select-option value="PEITO">Peito</ion-select-option>
+          <ion-select-option value="COSTAS">Costas</ion-select-option>
+          <ion-select-option value="OMBROS">Ombros</ion-select-option>
+          <ion-select-option value="BICEPS">Bíceps</ion-select-option>
+          <ion-select-option value="TRICEPS">Tríceps</ion-select-option>
+          <ion-select-option value="ANTEBRACOS">Antebraços</ion-select-option>
+          <ion-select-option value="ABDOMEN">Abdômen</ion-select-option>
+          <ion-select-option value="GLUTEOS">Glúteos</ion-select-option>
+          <ion-select-option value="COXAS">Coxas</ion-select-option>
+          <ion-select-option value="PANTURRILHAS">Panturrilhas</ion-select-option>
+          <ion-select-option value="CORPO_INTEIRO">Corpo Inteiro</ion-select-option>
+        </ion-select>
+        <ion-item>
+          <ion-label position="floating">Repetições</ion-label>
+          <ion-input type="number" [(ngModel)]="exercicio.repeticoes"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Séries</ion-label>
+          <ion-input type="number" [(ngModel)]="exercicio.series"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Intervalo</ion-label>
+          <ion-input type="number" [(ngModel)]="exercicio.intervalo"></ion-input>
+        </ion-item>
+        <ion-button expand="full" (click)="salvarExercicio()">Salvar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+  

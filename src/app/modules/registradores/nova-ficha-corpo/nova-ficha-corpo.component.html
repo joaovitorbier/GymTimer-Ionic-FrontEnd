@@ -1,0 +1,45 @@
+<ion-content>
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>
+        Adicionar Nova Ficha de Corpo
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item>
+        <ion-label>Sexo: </ion-label>
+        <ion-select [(ngModel)]="ficha.sexo">
+          <ion-select-option value="MALE">Masculino</ion-select-option>
+          <ion-select-option value="FEMALE">Feminino</ion-select-option>
+          <ion-select-option value="NEUTRAL">Neutro</ion-select-option>
+          <ion-select-option value="NONE">Prefiro não informar</ion-select-option>
+
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Peso: </ion-label>
+        <ion-input type="number" [(ngModel)]="ficha.peso"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Altura: </ion-label>
+        <ion-input type="number" [(ngModel)]="ficha.altura"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Body Fat: </ion-label>
+        <ion-input type="number" [(ngModel)]="ficha.bodyFat"></ion-input>
+      </ion-item>
+
+      <ion-button (click)="registrarFichaCorpo()">Salvar</ion-button>
+
+      <ion-button color="primary" (click)="voltarPaginaFicha()">Voltar</ion-button>
+
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>

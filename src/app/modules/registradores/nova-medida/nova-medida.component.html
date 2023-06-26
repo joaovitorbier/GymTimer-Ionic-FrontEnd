@@ -1,0 +1,36 @@
+<ion-content>
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>
+        Adicionar Nova Medida
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Nome Musculo: </ion-label>
+        <ion-input type="text" [(ngModel)]="medida.nomeMusculo"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Medida Atual: </ion-label>
+        <ion-input type="number" [(ngModel)]="medida.medidaAtual"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Medida Anterior:</ion-label>
+        <ion-input type="number" [(ngModel)]="medida.medidaAnterior"></ion-input>
+      </ion-item>
+
+
+      <ion-button (click)="adicionarMedida()">SALVAR</ion-button>
+      
+      <ion-button color="primary" routerLink="/ficha-corpo">Fichas de Corpo</ion-button>
+
+
+    </ion-card-content>
+
+
+  </ion-card>
+</ion-content>

@@ -1,0 +1,9 @@
+ion-content {
+  --background: var(--white, #f4f5f8);
+
+}
+
+ion-button {
+  --background: var(--secondary, #3dc2ff);
+  --border-width: 200px;
+}

@@ -1,0 +1,27 @@
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ lista.nome }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-button expand="full" (click)="executarLista(lista.id)">Executar Lista de Exercício</ion-button>
+        </ion-item>
+        <ion-item *ngFor="let exercicio of lista.listaDeExercicios">
+          <ion-label>{{ exercicio.nome }}</ion-label>
+          <ion-label>Categoria Muscular: {{ exercicio.categoriaMuscular }}</ion-label>
+          <ion-label>Repetições: {{ exercicio.repeticoes }}</ion-label>
+          <ion-label>Séries: {{ exercicio.series }}</ion-label>
+          <ion-label>Intervalo: {{ exercicio.intervalo }}</ion-label>
+          <br>
+          <ion-label><ion-button (click)="removerExercicio(lista.id,exercicio.id)">Remover Exercício</ion-button></ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+    <ion-card-content>
+        <ion-button expand="full" (click)="adicionarExercicio()">Adicionar novo Exercicio</ion-button>
+        <ion-button expand="full" color="primary" routerLink="/ficha-exercicio">Voltar</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
